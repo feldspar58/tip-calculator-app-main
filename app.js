@@ -61,7 +61,7 @@ customInput.addEventListener('input', () => {
 
 
 function updateCalculation(){
-    const tip = (bill * clickedPercent);
+    const tip = (bill / totalPeople) * clickedPercent;
     const total = tip * totalPeople;
 
     tipAmountDisplay.textContent = tip.toFixed(2);
