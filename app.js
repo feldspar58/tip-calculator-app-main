@@ -61,7 +61,7 @@ customInput.addEventListener('input', () => {
 
 
 function updateCalculation(){
-    const tip = (bill / totalPeople) * clickedPercent;
+    const tip = (bill * clickedPercent) / totalPeople;
     const total = tip * totalPeople;
 
     tipAmountDisplay.textContent = tip.toFixed(2);
@@ -73,6 +73,8 @@ reset.addEventListener('click', () => {
     peopleInput.value = '';
     tipAmountDisplay.textContent = '0.00';
     totalAmountDisplay.textContent = '0.00';
+    customBtn.style.display = 'block';
+    customInput.style.display = 'none';
 
     buttons.forEach(button => button.classList.remove('active'));
     clickedPercent = 0;
