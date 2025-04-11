@@ -201,6 +201,7 @@ section{
   .amount{
     display: flex;
     font-size: 2.3rem;
+    font-weight: 700;
     color: var(--Green-400);
     cursor: pointer;
   }
